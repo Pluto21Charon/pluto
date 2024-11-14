@@ -8,7 +8,7 @@ import sys
 app = Flask(__name__)
 
 # Change the CWD to the script's directory
-os.chdir(os.path.dirname(sys.executable))
+os.chdir("D:\GitHub\pluto")
 
 openai.api_base = 'your api-linLK '
 openai.api_key = "your key"
