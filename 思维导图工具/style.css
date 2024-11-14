@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 90%;
+}
+a#download-link {
+    padding: 10px 20px;
+    background-color: #FF7F50; /* 橙色 */
+    color: #FFFFFF; /* 白色 */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    font-size: 1em;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+a#download-link:hover {
+    background-color: #FF6347; /* 更深的橙色 */
+    transform: scale(1.05);
+}
+
+a#download-link:active {
+    transform: scale(1);
+}
+.btn-action {
+    padding: 10px 20px;
+    background-color: #FF7F50; /* 橙色 */
+    color: #FFFFFF; /* 白色 */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    outline: none;
+    font-size: 1em;
+    margin-top: 10px;
+}
+#node-info {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    color: #666666;
+  }
+.token-display {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-align: right;
+}
+
+.token-limit {
+    font-size: 0.8em;
+    color: #888;
+}
+
+.btn-action:hover {
+    background-color: #FF6347; /* 更深的橙色 */
+    transform: scale(1.05);
+}
+
+.btn-action:active {
+    transform: scale(1);
+}
+
+.card {
+    width: 48%;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.pdf-section, .mindmap-section {
+    height: 100%;
+}
+
+.pdf-section h2, .mindmap-section h2 {
+    color: #333333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+button#ask, button#draw {
+    padding: 10px 20px;
+    background-color: #FF7F50; /* 橙色 */
+    color: #FFFFFF; /* 白色 */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    outline: none;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+button#ask:hover, button#draw:hover {
+    background-color: #FF6347; /* 更深的橙色 */
+    transform: scale(1.05);
+}
+
+button#ask:active, button#draw:active {
+    transform: scale(1);
+}
+.mindmap-display {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    flex-grow: 1;
+    height: 1px;   /* 新增 */
+    flex: 1;   /* 新增 */
+    overflow: auto; /* 新增，允许滚动 */
+    margin-bottom: 10px;
+}
+
+
+#pdf-iframe, .mindmap-display {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+#input-text {
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 95%;
+    height: 20%;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+.file-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    outline: none;
+}
+
+.file-label:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.file-label:active {
+    transform: scale(1);
+}
+
+.file-input {
+    display: none;
+}
+
+.button-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#pdf-iframe ::selection {
+    background-color: yellow;
+    color: black;
+}
