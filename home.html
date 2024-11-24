@@ -1,50 +1,69 @@
 <!DOCTYPE html>
 <html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PDF Viewer and Mindmap Generator</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="pdfjs-3.7.107-dist/build/pdf.js"></script>
     <script src="vis-network.min.js"></script>
     <script src="axios.min.js"></script>
-
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="card pdf-section">
-            <h2>PDF 阅读器</h2>
-            <label for="select-pdf" class="file-label">选择PDF文件</label>
-            <input type="file" id="select-pdf" class="file-input">
-            <iframe id="pdf-iframe"></iframe>
-        </div>
-        <div class="card mindmap-section">
-            <h2>思维导图生成器
-                <span id="token-display" style="float: right; font-size: small;"></span>
+      <div class="card pdf-section">
+        <h2>PDF 阅读器</h2>
+        <label for="select-pdf" class="file-label">选择PDF文件</label>
+        <input type="file" id="select-pdf" class="file-input" />
+        <iframe id="pdf-iframe"></iframe>
+      </div>
+      <div class="card mindmap-section">
+        <h2>
+          思维导图生成器
+          <span
+            id="token-display"
+            style="float: right; font-size: small"
+          ></span>
 
-                <span id="token-count" style="float: right; font-size: small; color: #bd4444;"></span>
-            </h2>
-            <div id="mindmap-display" class="mindmap-display"></div>
-            <div id="node-info" style="background-color: #2f2f2f; color: #90EE90; padding: 10px; margin-top: 10px; border-radius: 5px; font-size: 18px;"></div>
-            <div id="modal">
-                <div id="modal-content">
-                    <p id="modal-text"></p>
-                </div>
-            </div>
-            <div class="interaction-section">
-                <textarea id="input-text" placeholder="在这里输入文字..."></textarea>
-                <div class="button-section">
-                    <button id="ask">GPT提问</button>
-                    <button id="generate-pdf" class="btn-action">GPT生成PDF导图</button>
-                    <button id="import-mindmap" class="btn-action">导入思维导图</button>
-                    <button id="draw">画出思维导图</button>
-                    <a id="download-link" href="#" download="mindmap.json">下载思维导图</a>
-
-                </div>
-            </div>
+          <span
+            id="token-count"
+            style="float: right; font-size: small; color: #bd4444"
+          ></span>
+        </h2>
+        <div id="mindmap-display" class="mindmap-display"></div>
+        <div
+          id="node-info"
+          style="
+            background-color: #2f2f2f;
+            color: #90ee90;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            font-size: 18px;
+          "
+        ></div>
+        <div id="modal">
+          <div id="modal-content">
+            <p id="modal-text"></p>
+          </div>
         </div>
+        <div class="interaction-section">
+          <textarea id="input-text" placeholder="在这里输入文字..."></textarea>
+          <div class="button-section">
+            <button id="ask">大模型提问</button>
+            <button id="generate-pdf" class="btn-action">
+              大模型生成PDF导图
+            </button>
+            <button id="import-mindmap" class="btn-action">导入思维导图</button>
+            <button id="draw">画出思维导图</button>
+            <a id="download-link" href="#" download="mindmap.json"
+              >下载思维导图</a
+            >
+          </div>
+        </div>
+      </div>
     </div>
-    <input type="file" id="file-input" accept=".json" style="display: none;">
+    <input type="file" id="file-input" accept=".json" style="display: none" />
     <script src="app.js"></script>
-</body>
+  </body>
 </html>

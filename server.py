@@ -5,18 +5,20 @@ from flask_cors import CORS
 from werkzeug.utils import secure_filename
 import sys
 
-app = Flask(__name__)
+
 
 # Change the CWD to the script's directory
-os.chdir("D:\GitHub\pluto")
+os.chdir(os.getcwd())
+print(os.getcwd())
 
-openai.api_base = 'your api-linLK '
-openai.api_key = "your key"
+openai.api_base = ""
+openai.api_key = ""
 
 app = Flask(__name__)
 CORS(app)
 
 UPLOAD_FOLDER = os.path.join(os.getcwd(), 'uploads')  # Use absolute path
+print(UPLOAD_FOLDER)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 
@@ -48,7 +50,7 @@ def uploaded_file(filename):
 
 def request_api(prompt):
     response = openai.ChatCompletion.create(
-        model="gpt-4",
+        model="gpt-4",  # remember to change it
         messages=[{"role": "user", "content": prompt}],
         temperature=1,
         max_tokens=4500,
@@ -72,7 +74,7 @@ def ask():
     return {"message": result}
 
 
-@app.route('/', defaults={'req_path': ''})
+@app.route('/', defaults={'req_path': 'home.html'})
 @app.route('/<path:req_path>')
 def dir_listing(req_path):
     BASE_DIR = os.getcwd()  # Use the current working directory
